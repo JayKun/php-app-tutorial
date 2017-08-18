@@ -30,16 +30,8 @@ if ((isset($_SESSION['login']) && $_SESSION['login'] == 1)) {
 <section class="container jumbotron">
     <div class="row">
 	    <div class="col-md-4">
-			<form action="login.php" method="post">
-				<div class="form-group">
-					Username: <input type="text" name="username" class="form-control">
-					Password: <input type="password" name="password" class="form-control">
-					<br>
-			    	<button type="submit" class="btn btn-info">Login</button>
-			    	
-				</div>
-			</form>
-			<a href="signup.php"><button>Register</button></a>
+		TODO: Form tag, action attribute = login.php	
+                     <a href="signup.php"><button>Register</button></a>
 		</div>
     </div>
 
