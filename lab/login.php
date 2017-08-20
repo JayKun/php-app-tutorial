@@ -48,8 +48,9 @@
 	<title></title>
 </head>
 <body>
-    <?php 
-        echo $errorMesasge;
+    <?php
+        //echo means print, in this case, whatever thing assigned to the variable $errorMessage will be printed
+        echo $errorMessage;
      ?>
      <a href="index.php"><button>Back</button></a>
 </body>

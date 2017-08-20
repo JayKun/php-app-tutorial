@@ -1,23 +1,31 @@
 <?php
-		$servername = "localhost";
-		$username = "id2460984_admin";
-		$password = "ilovetophortay";
-		$dbname = "id2460984_students";
+        //insert appropriately based on your MySQL database information
+		$servername = "";
+		$username = "";
+		$password = "";
+		$dbname = "";
 
 		// Create connection
+        // mysqli is an inbuilt library class
 		$conn = new mysqli($servername, $username, $password, $dbname);
 		
 		// Check connection
-		if ($conn->connect_error) {
+		if ($conn->connect_error)
+        {
 		    die("Connection failed: " . $conn->connect_error);
 		} 
-
+    
+    
 		$sql = "INSERT INTO students(firstname, lastname, email)
 		VALUES ('".$_POST['firstname']. "', '" .$_POST['lastname']. "','" .$_POST['email']."')";
 
-		if ($conn->query($sql) === TRUE) {
+		if ($conn->query($sql) === TRUE)
+        {
 		    echo "New record created successfully";
-		} else {
+		}
+    
+        else
+        {
 		    echo "Error: " . $sql . "<br>" . $conn->error;
 		}
 

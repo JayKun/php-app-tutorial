@@ -66,10 +66,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			Username: <input type="text" name="username" class="form-control">
 			Password: <input type="text" name="password" class="form-control">
 			<br>
-            <button class="btn btn-info" type="submit">Sign Up</button>
+            <!-- TODO: create a button "Sign up", type="submit"-->
 		</div>
 	</form>
-    <a href="index.php"><button class="btn btn-success">Go Back</button></a>
+    <!-- incomplete, link it to index.php -->
+    <button class="btn btn-success">Go Back</button>
     <?php echo "\n".$errorMessage; ?>
     </section>
 </body>

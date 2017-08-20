@@ -16,55 +16,62 @@
 
 <section class="container">
    <h1><span class="glyphicon glyphicon-user"> </span> Student Records</h1>                                                                         
-  <div class="table-responsive">          
-  <table class="table">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
 
-<?php
-				$servername = "localhost";
-				$username = "id2460984_admin";
-				$password = "ilovetophortay";
-				$dbname = "id2460984_students";
 
-				// Create connection
-				$conn = new mysqli($servername, $username, $password, $dbname);
+                <tbody>
+                    <?php
+                        //all these 4 variables are based on MySQL database
+                        //insert appropriately based on your database information
+                        $servername = "";
+                        $username = "";
+                        $password = "";
+                        $dbname = "";
 
-				// Check connection
-				if ($conn->connect_error) {
-				    die("Connection failed: " . $conn->connect_error);
-				} 
+                        // Create connection
+                        $conn = new mysqli($servername, $username, $password, $dbname);
 
-				$sql = "SELECT * FROM students";
-				$result = $conn->query($sql);
+                        // Check connection
+                        if ($conn->connect_error)
+                        {
+                            die("Connection failed: " . $conn->connect_error);
+                        }
 
-				if ($result->num_rows > 0) {
-				    // output data of each row
-				    while($row = $result->fetch_assoc()) {
-				        echo "<tr class='info'><td>" . $row["id"]. "</td>";
-				        echo "<td>" .$row["firstname"]. " </td>";
-				        echo "<td>" .$row["lastname"]."</td>";
-				        echo "<td>".$row["email"]."</td> </tr>";
-				    }
-				} else {
-				    echo "0 results";
-				}
-				$conn->close();
-?>
-
-      
-    </tbody>
-  </table>
-  </div>
-  <a href="home.php"><button class="btn btn-success">Go Back</button></a>
+                        $sql = "SELECT * FROM students";
+                        $result = $conn->query($sql);
+                        
+                        if ($result->num_rows > 0)
+                        {
+                            // output data of each row
+                            while($row = $result->fetch_assoc())
+                            {
+                                echo "<tr class='info'><td>" . $row["id"]. "</td>";
+                                echo "<td>" .$row["firstname"]. " </td>";
+                                echo "<td>" .$row["lastname"]."</td>";
+                                echo "<td>".$row["email"]."</td> </tr>";
+                            }
+                        }
+                        
+                        else
+                        {
+                            echo "0 results";
+                        }
+				
+                        $conn->close();
+                    ?>
+                </tbody>
+            </table>
+        </div>
+            <a href="home.php"><button class="btn btn-success">Go Back</button></a>
 </section>
     
 </body>

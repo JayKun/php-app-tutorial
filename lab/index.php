@@ -19,19 +19,20 @@ if ((isset($_SESSION['login']) && $_SESSION['login'] == 1)) {
 </head>
 	<title>PhorTay</title>
 </head>
+
 <body>
 
 <section class="container">
-<h2>PhorTay Student Database</h2>
-
+    <h2>PhorTay Student Database</h2>
 </section>
 
 
 <section class="container jumbotron">
     <div class="row">
 	    <div class="col-md-4">
-		TODO: Form tag, action attribute = login.php	
-                     <a href="signup.php"><button>Register</button></a>
+            <!-- TODO: Form tag, action attribute = login.php -->
+                <!-- this is to create a "register" button, similar to your "Login" button of say, Facebook -->
+                <a href="signup.php"><button>Register</button></a>
 		</div>
     </div>
 

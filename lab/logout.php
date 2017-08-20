@@ -12,7 +12,8 @@
 	<body>
 
 	User Logged Out
-	<a href="index.php"><button> Home </button></a>
+    <!-- create a button upon pressing links you to index.php, name the button Home -->
+	<a></a>
 
 	</body>
 	</html>
