@@ -3,19 +3,19 @@
    $password = "";
    $errorMesasge ="";
 
-   $database = "students";
+   $database = "login";
 
    if($_SERVER["REQUEST_METHOD"] == "POST" ){
 	   $username = $_POST["username"];
 	   $password = $_POST["password"];
 
-	   $connection = new mysqli("localhost:80", "admin", "admin", $database);
+	   $connection = new mysqli("localhost", "admin", "admin", $database);
        			if ($connection->connect_error) {
 				    die("Connection failed: " . $conn->connect_error);
 				} 
 
 	   if($connection){
-	       $sql_query = "SELECT * FROM login WHERE username='$username' ";
+	       $sql_query = "SELECT * FROM users WHERE username='$username' ";
 	       $result =  $connection->query($sql_query); 
 	       // if we find the user in the database
 		   if($result->num_rows == 1){

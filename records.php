@@ -30,7 +30,7 @@
       
 
 <?php
-				$servername = "localhost:80";
+				$servername = "localhost";
 				$username = "admin";
 				$password = "admin";
 				$dbname = "students";
