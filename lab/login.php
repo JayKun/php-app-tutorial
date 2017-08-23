@@ -1,41 +1,49 @@
 <?php
+   // NOTE: These are not the database credentials but the login credentials of your web app.
    $username = "";
    $password = "";
    $errorMesasge ="";
 
-   $database = "id2460984_students";
-
+   $database = "login";
+   
    if($_SERVER["REQUEST_METHOD"] == "POST" ){
 	   $username = $_POST["username"];
-	   $password = $_POST["password"];
+	   // TODO: Get the password from the $_POST variable
 
-	   $connection = new mysqli("localhost", "id2460984_admin", "ilovetophortay", $database);
+	   $connection = new somefunction ("localhost", "admin", "admin", $database);
        			if ($connection->connect_error) {
 				    die("Connection failed: " . $conn->connect_error);
 				} 
 
 	   if($connection){
-	       $sql_query = "SELECT * FROM login WHERE username='$username' ";
-	       $result =  $connection->query($sql_query); 
-	       // if we find the user in the database
-		   if($result->num_rows == 1){
-                $table = $result->fetch_assoc();
-                if(password_verify($password, $table['password'])){
+		// TODO: Construct a SQL qeury to SELECT the entry that has it's username field = $username
+	       $sql_query = "";
+	 
+	       // TODO: Using the query() method from the connection object, query the database using the SQL query you constructed. 
+	       $result = ; 
+	       // If the user with the username we passed in is found
+		if($result->num_rows == 1){
+		    // TODO: Convert the result to a associative array using the fetch_assoc() method.
+                    $table = $result->fetch_assoc();
+		    // TODO: verify that the passwords match using the password_verify function. ($password , $table['password'])
+                    if(){
+			// Initialize a session
                 	session_start(); 
                 	$_SESSION['login'] = 1;
-                	header("Location: home.php");
-                }
-                else{
+			//TODO: Redirect the user to the home page.
+                	header();
+                    }
+                    else{
                 	$errorMesasge = "Login Failed :( ";
                 	session_start();
                 	$_SESSION['login'] = '';
                 	header("Location: index.php");
-                }
-		   }
-		   else{
-		   	$errorMesasge = "Login Failed :( ";
-		   }
-       }
+                    }
+	        }
+	        else{
+		    $errorMesasge = "Login Failed :( ";
+	        }
+           }
 	   else{
 	       $errorMesasge = "Database not found.";
 	   }
