@@ -7,16 +7,17 @@
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $username = $_POST["username"];
     $password = $_POST["password"];
-    $database = "id2460984_students";
+    $database = "login";
 
-    $connection = new mysqli("localhost", "id2460984_admin", "ilovetophortay", $database);
-                    if ($connection->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                } 
+    $connection = new mysqli("localhost", "admin", "admin", $database);
+    if ($connection->connect_error) {
+	die("Connection failed: " . $conn->connect_error);
+    } 
     // Check whether the database exists.
     if($connection){
-    	// Ask the database for the resource you want.
-    	$sql_query = "SELECT * FROM login WHERE username = '$username'";
+    	// TODO: Check the dataase for duplicates.
+	// Construct a SQL query that SELECTS everything from  the users table that has it's username field = $username
+    	$sql_query = "SELECT * FROM users WHERE username = '$username'";
 
     	// Retrieve the resource.
     	$result = $connection->query($sql_query);
@@ -25,11 +26,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $errorMessage = "username is already taken.";
     	}
     	else{
-    		$passHash = password_hash($password, PASSWORD_DEFAULT);
-    		$sql_query = "INSERT INTO login(username, password) VALUES ('$username', '$passHash')";
-    		$connection->query($sql_query);
-    		header("Location: index.php");
-
+		// TODO: Use the build in password_hash function to hash the password
+    		$passHash = "";
+		// TODO: Construct a SQL query that inserts the new username and the new $passHash into the users table.
+    		$sql_query = "";
+		// TODO: query the database using the previosuly constructed sql query
+    		$connection->query();
+		// TODO: Redirect the user to the login page.
     	}
     }
 
