@@ -45,9 +45,10 @@
                         {
                             die("Connection failed: " . $conn->connect_error);
                         }
-
-                        $sql = "SELECT * FROM students";
-                        $result = $conn->query($sql);
+			// TODO: Construct a sql query to select all the field from the students table
+                
+			// TODO: Query the database using the sql that you have previously constructed
+                        
                         
                         if ($result->num_rows > 0)
                         {
@@ -57,7 +58,7 @@
                                 echo "<tr class='info'><td>" . $row["id"]. "</td>";
                                 echo "<td>" .$row["firstname"]. " </td>";
                                 echo "<td>" .$row["lastname"]."</td>";
-                                echo "<td>".$row["email"]."</td> </tr>";
+				// TODO: echo the email column
                             }
                         }
                         
@@ -65,7 +66,7 @@
                         {
                             echo "0 results";
                         }
-				
+			// Close the connection	
                         $conn->close();
                     ?>
                 </tbody>
