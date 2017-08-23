@@ -1,5 +1,7 @@
 <?php
+// Checks for pre-existing session variables 
 session_start();
+// Redirects the user to home.php if session variable is not set. 
 if ((isset($_SESSION['login']) && $_SESSION['login'] == 1)) {
 	header ("Location: home.php");
 }
@@ -31,10 +33,11 @@ if ((isset($_SESSION['login']) && $_SESSION['login'] == 1)) {
 <section class="container jumbotron">
     <div class="row">
 	    <div class="col-md-4">
-            <!-- TODO: Form tag, action attribute = login.php -->
-                <!-- this is to create a "register" button, similar to your "Login" button of say, Facebook -->
-                <a href="signup.php"><button>Register</button></a>
-		</div>
+		<!-- TODO: Create a <form></form> tag with action attribute = 'login.php' -->
+                <!-- Inside the <form> tag you have two <input> fields, namely username and password-->
+		<!-- Create a button with class ="btn btn-info" and type = "submit" --> 
+            <a href="signup.php"><button>Register</button></a>
+            </div>
     </div>
 
     <a href="records.php"><h2>View records</h2></a>
