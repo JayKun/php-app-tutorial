@@ -61,3 +61,38 @@ Lab 5:
 
 Lab 6:
 [LOGIN.PHP]
+1. Fill up the TODO section.
+2. Initilaize a connection to the login database using the built in sqli() function.
+3. Check for connection errors by checking the connect error member variable in teh connection object.
+4. Construct a SQL query to SELECT an entry with username equal to the username input.
+5. Use the connection object's query() method to send the previously constructed sql query to the database.
+6. Store the result in a new variable. 
+7. Check whether a particular entry with the username exists.
+8. Use the result object's fetch_assoc function to convert the object into an associative array. 
+9. Compare the password hashes using the built-in php password_verify function.
+
+Lab 7:
+[SIGN UP.PHP]
+1. Fill up the TODO section.
+2. Repeat the necesary steps to set up a connection with the login database. 
+3. Hash the password using the built-in password_hash(password, PASSWORD_DEFAULT) method.
+4. Construct a SQL query to INSERT an entry to the database. 
+
+Lab 8:
+[HOME.PHP]
+1. Fill in the required form tags just like index.php
+2. Take note of the "type" attribute in the input tags. 
+3. Set the action attribute of the <form> tag to be 'form.php'.
+
+Lab 9:
+[FORM.PHP]
+1. FIll in the TODO sections
+2. Retrieve all the input from HOME.PHP from the $_POST variable. e.g. $email = POST['email']
+3. Connect to the students database. 
+4. Construct a query that INSERTS an entry to username, password, and email fields of the students table.
+
+Lab 10:
+[RECORDS.PHP]
+1. Fill up the TODO sections
+2. Construct a query that SELECTS all the fields/columns from the table.
+3. Loop through the results and using the echo function output necessary html tags. HINT: <tr> tags and <td> tags
