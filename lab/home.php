@@ -24,19 +24,9 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] !='')) {
     <section class="container">
     <h1> <span class="glyphicon glyphicon-pencil"></span> Insert entry to database</h1>
     <div class="jumbotron">
-		<form name="form" action="form.php" method="post">
-		<div class="form-group">
-			  First name: <input type="text" class="form-control" name="firstname" id="firstname" value="Joe" required>
-			  <br>
-			  Last name: <input type="text" class="form-control" name="lastname" id="lastname" value="Biden" required>
-			  <br>
-			  Email: <input type="email" class="form-control" name="email" id="interests" value="joe@brownhouse.com" required>
-			  <br>
-			  <button type="submit" class="btn btn-info" value="Submit">Submit</button>
-		</div>
-		</form>
-	</div>
-    <a href="records.php"><h2>View records</h2></a>
+<!-- 	 TODO: Add a <form></form> tag with action="form.php"  -->
+    </div>
+<!--     TODO: Add a h2 tag that links to 'records.php' -->
     <br>
     <a href="logout.php"><button class="btn btn-warning">Logout</button></a>
 </section>
