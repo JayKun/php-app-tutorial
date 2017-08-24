@@ -4,15 +4,18 @@ Lab 1: [SET UP XAMPP AND MySQL]
 3.	Verify that XAMPP is working by going to your browser and typing in "localhost"
 4.	Click on the admin button on the MySQL row.
 5.	A new tab should appear showing a phpMyAdmin interface.
+
 Lab 2: [CREATE A NEW USER ACCOUNT]
 1.	Go to the user accounts tab.
 2.	Scroll down and look for the create new user option.
 3.	username: admin, hostname: any, password: admin
 4.	Check the grant all privileges checkbox
 5.	Save
+
 Lab 3: [CREATE THE LOGIN DATABASE]
 1.	Create a new database by clicking on the tiny plus sign on the left most column.
 2.	Name the database "login"
+
 [CREATE THE LOGIN TABLE]
 1.	Click on the login database located on the left most column.
 2.	Create a table with the name ‘users’.
@@ -23,6 +26,7 @@ Lab 3: [CREATE THE LOGIN DATABASE]
 7.	username: VARCHAR 50
 8.	password: VARCHAR 255
 9.	Click on save
+
 Lab 4: [CREATETHE STUDENTS DATABASE]
 1.	Create a new database by clicking on the tiny plus sign on the left most column.
 2.	Name the database "students"
@@ -40,6 +44,8 @@ Lab 4: [CREATETHE STUDENTS DATABASE]
 9.	email: VARCHAR 50
 10.	Save
 Now we have 2 databases with each database containing a table.
+
+
 Lab 5: [INDEX.PHP] NETBEANS
 1.	Create a new project in Netbeans.
 2.	Make sure you select PHP in the new project window that pops up.
@@ -47,6 +53,8 @@ Lab 5: [INDEX.PHP] NETBEANS
 4.	Verify that everything works by clicking on the green play button on the top.
 5.	A new tab should pop up showing you the template.
 6.	Fill in the form tag in index.php
+
+
 Lab 6: [LOGIN.PHP]
 1.	Fill up the TODO sections.
 2.	Initilaize a connection to the login database using the built in sqli() function.
@@ -65,15 +73,21 @@ Lab 7: [SIGN UP.PHP]
 2.	Repeat the necessary steps to set up a connection with the login database.
 3.	Hash the password using the built-in password_hash(password, PASSWORD_DEFAULT) method.
 4.	Construct a SQL query to INSERT an entry to the database.
+
+
 Lab 8: [HOME.PHP]
 1.	Fill in the required form tags just like index.php
 2.	Take note of the "type" attribute in the input tags.
 3.	Set the action attribute of the tag to be 'form.php'.
+
+
 Lab 9: [FORM.PHP]
 1.	Fill up the TODO sections
 2.	Retrieve all the input from HOME.PHP from the $_POST variable. e.g. $email = POST['email']
 3.	Connect to the students database.
 4.	Construct a query that INSERTS an entry to username, password, and email fields of the students table.
+
+
 Lab 10: [RECORDS.PHP]
 1.	Fill up the TODO sections
 2.	Construct a query that SELECTS all the fields/columns from the table.
