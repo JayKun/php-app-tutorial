@@ -30,7 +30,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Redirects the user to index.php
     	else{
     		$passHash = password_hash($password, PASSWORD_DEFAULT);
-    		$sql_query = "INSERT INTO login(username, password) VALUES ('$username', '$passHash')";
+    		$sql_query = "INSERT INTO users(username, password) VALUES ('$username', '$passHash')";
     		$connection->query($sql_query);
     		header("Location: index.php");
 
