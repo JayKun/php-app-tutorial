@@ -8,7 +8,7 @@ Lab 1: [SET UP XAMPP AND MySQL]
 Lab 2: [CREATE A NEW USER ACCOUNT]
 1.	Go to the user accounts tab.
 2.	Scroll down and look for the create new user option.
-3.	username: admin, hostname: any, password: admin
+3.	username: admin, hostname: local, password: admin
 4.	Check the grant all privileges checkbox
 5.	Save
 
