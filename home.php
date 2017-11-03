@@ -28,9 +28,9 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] !='')) {
 		<div class="form-group">
 			  First name: <input type="text" class="form-control" name="firstname" id="firstname" value="Joe" required>
 			  <br>
-			  Last name: <input type="text" class="form-control" name="lastname" id="lastname" value="Biden" required>
+			  Last name: <input type="text" class="form-control" name="lastname" id="lastname" value="Bruin" required>
 			  <br>
-			  Email: <input type="email" class="form-control" name="email" id="interests" value="joe@brownhouse.com" required>
+			  Email: <input type="email" class="form-control" name="email" id="interests" required>
 			  <br>
 			  <button type="submit" class="btn btn-info" value="Submit">Submit</button>
 		</div>
